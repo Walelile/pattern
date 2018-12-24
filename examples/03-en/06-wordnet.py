@@ -25,6 +25,17 @@ for synset in wordnet.synsets("train", pos=NOUN):
     print("   Meronyms: %s" % synset.meronyms())  # List of synsets that are part/member of this synset.
     print("")
 
+for synset in wordnet.synsets("train", pos=VERB):
+    print("Description: %s" % synset.gloss)       # Definition string.
+    print("   Synonyms: %s" % synset.senses)      # List of synonyms in this sense.
+    print("   Hypernym: %s" % synset.hypernym)    # Synset one step higher in the semantic network.
+    print("   Hyponyms: %s" % synset.hyponyms())  # List of synsets that are more specific.
+    print("   Holonyms: %s" % synset.holonyms())  # List of synsets of which this synset is part/member.
+    print("   Meronyms: %s" % synset.meronyms())  # List of synsets that are part/member of this synset.
+    print("")
+
+
+
 # What is the common ancestor (hypernym) of "cat" and "dog"?
 a = wordnet.synsets("cat")[0]
 b = wordnet.synsets("dog")[0]

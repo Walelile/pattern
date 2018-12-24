@@ -92,4 +92,7 @@ print("")
 from pattern.en import PRESENT, PLURAL
 print(tenses("are"))
 print((PRESENT, 1, PLURAL) in tenses("are"))
+print(lexeme('are'))
+print(lexeme('summarize'))
+print(lexeme('summary'))
 print("pl" in tenses("are"))
